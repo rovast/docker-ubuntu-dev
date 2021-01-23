@@ -12,7 +12,9 @@ services:
 
       # 可配置文件映射
       - ./code-server.yaml:/root/.config/code-server/config.yaml
+      - ./storage/code-server:/root/.local/share/code-server
 
       # TODO: 增加自己的代码仓映射目录
+      - /home/luohao/Codes:/root/Codes
 
     command: /home/code-server/bin/code-server
