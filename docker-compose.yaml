@@ -2,11 +2,17 @@ version: '2'
 
 services:
   ubuntu-dev:
-    image: ubuntu:18.04
+    image: rovast/ubuntu-dev-full
     restart: always
     ports:
       - 8080:8080
     volumes:
+      # 安装软件
       - ./code-server-3.8.0-linux-amd64:/home/code-server
+
+      # 可配置文件映射
       - ./code-server.yaml:/root/.config/code-server/config.yaml
+
+      # TODO: 增加自己的代码仓映射目录
+
     command: /home/code-server/bin/code-server
