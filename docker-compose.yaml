@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  ubuntu-dev:
+    image: ubuntu:18.04
+    restart: always
+    ports:
+      - 8080:8080
+    volumes:
+      - ./code-server-3.8.0-linux-amd64:/home/code-server
+      - ./code-server.yaml:/root/.config/code-server/config.yaml
+    command: /home/code-server/bin/code-server
