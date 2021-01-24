@@ -15,5 +15,10 @@ RUN apt-get install -y \
 RUN apt-get install -y \
     openjdk-8-jdk
 
+# Go 环境
+COPY --from=golang:1.14-stretch /usr/local/go/ /usr/local/go/
+ENV PATH /usr/local/go/bin:$PATH
+ENV GOLANG_VERSION 1.14.14
+
 # 清除工作，减小镜像体积
 # RUN rm -rf /var/lib/apt/lists/*
