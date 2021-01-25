@@ -15,6 +15,6 @@ services:
       - ./storage/code-server:/root/.local/share/code-server
 
       # TODO: 增加自己的代码仓映射目录
-      - /home/luohao/Codes:/root/Codes
+      - $HOME:/root/mount
 
     command: /home/code-server/bin/code-server
