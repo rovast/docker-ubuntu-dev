@@ -21,6 +21,26 @@ docker-compose up -d
 
 - code-server
 
+支持的语言栈
+- go
+- java
+- nodejs
+- php
+
+常用开发包
+- cron
+- curl
+- git
+- libicu-dev
+- libzip-dev
+- locales
+- oh-my-zsh
+- unzip
+- vim
+- wget
+- zip
+- zsh
+
 ## Dockerfiles
 
 - `rovast/ubuntu-dev-base` 基础镜像，包含基础软件
